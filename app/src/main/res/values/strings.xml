@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SampleFootballApp</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="choose_league">Choose league</string>
+    <string name="choose_country">Choose country</string>
+    <string name="live_football_scores">Live Football Scores</string>
+    <string name="oneSignalDialogRequest">Do you want to get notifications about recent matches?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+</resources>

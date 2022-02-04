@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation.xml"
+    app:startDestination="@id/footballSplashFragment">
+
+    <fragment
+        android:id="@+id/footballLeaguesFragment"
+        android:name="com.shegor.samplefootballapp.footballLeagues.FootballLeaguesFragment"
+        android:label="fragment_football_leagues"
+        tools:layout="@layout/fragment_football_leagues" >
+        <action
+            android:id="@+id/action_footballLeaguesFragment_to_footballMatchesFragment"
+            app:destination="@id/footballMatchesFragment" />
+        <action
+            android:id="@+id/action_footballLeaguesFragment_to_footballNewsWebViewFragment"
+            app:destination="@id/footballLiveScoresWebViewFragment" />
+        <action
+            android:id="@+id/action_footballLeaguesFragment_to_footballLiveScoresWebViewFragment"
+            app:destination="@id/footballLiveScoresWebViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/footballMatchesFragment"
+        android:name="com.shegor.samplefootballapp.footballMatches.FootballMatchesFragment"
+        android:label="fragment_football_matches"
+        tools:layout="@layout/fragment_football_matches" >
+        <argument
+            android:name="league"
+            app:argType="com.shegor.samplefootballapp.models.League" />
+    </fragment>
+    <fragment
+        android:id="@+id/footballSplashFragment"
+        android:name="com.shegor.samplefootballapp.footballSplash.FootballSplashFragment"
+        android:label="fragment_football_splash"
+        tools:layout="@layout/fragment_football_splash" >
+        <action
+            android:id="@+id/action_footballSplashFragment_to_footballLeaguesFragment"
+            app:destination="@id/footballLeaguesFragment"
+            app:popUpTo="@id/footballSplashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/footballLiveScoresWebViewFragment"
+        android:name="com.shegor.samplefootballapp.footballLiveScoresWebView.FootballLiveScoresWebViewFragment"
+        android:label="fragment_football_live_scores_web_view"
+        tools:layout="@layout/fragment_football_live_scores_web_view" />
+</navigation>
