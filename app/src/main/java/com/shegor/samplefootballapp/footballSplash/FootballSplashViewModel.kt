@@ -21,6 +21,8 @@ class FootballSplashViewModel(val repo: FootballRepo) : ViewModel() {
 
             repo.refreshLeagues()
 
+            println("HI")
+
             withContext(Dispatchers.IO) {
                 delay(300)
             }
